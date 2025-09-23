@@ -1,0 +1,18 @@
+<Project Sdk="Microsoft.NET.Sdk.WebAssembly">
+  <PropertyGroup>
+    <TargetFramework>net9.0</TargetFramework>
+		<AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+		<Nullable>enable</Nullable>
+		<AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+		<WasmEnableThreads>true</WasmEnableThreads>
+		<JsonSerializerIsReflectionEnabledByDefault>true</JsonSerializerIsReflectionEnabledByDefault>
+		<PublishTrimmed>true</PublishTrimmed>
+		<TrimMode>partial</TrimMode>
+  </PropertyGroup>
+
+	<!-- make sure any published output is deleted beforehand -->
+	<Target Name="ForceDeletePublishFolder" AfterTargets="GetCopyToPublishDirectoryItems">
+		<Message Text="Deleting old publish output at: $(PublishDir)" Importance="high" />
+		<RemoveDir Directories="$(PublishDir)\wwwroot" Condition="Exists('$(PublishDir)\wwwroot')" />
+	</Target>
+</Project>
