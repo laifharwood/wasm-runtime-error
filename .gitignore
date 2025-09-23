@@ -1,3 +1,4 @@
 .vs/
 wasmbrowser/bin/
 wasmbrowser/obj/
+wasm-ui/obj/
