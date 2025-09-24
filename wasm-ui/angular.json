@@ -34,11 +34,6 @@
 								"glob": "**/*",
 								"input": "../wasmbrowser/bin/Release/net9.0/publish/wwwroot",
 								"output": "/wasm/v1"
-							},
-							{
-								"glob": "**/*",
-								"input": "node_modules/monaco-editor/min",
-								"output": "/assets/monaco/min"
 							}
 						],
 						"styles": [
